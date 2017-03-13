@@ -1,0 +1,80 @@
+//Parallax Scrolling Affect
+
+html, main, body, .parallax-container {
+	/* important */
+	height: 100%;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.cd-fixed-bg {
+	height: 100%;
+  position: relative;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+  z-index: 1;
+  &.cd-bg-1 {
+    background-image: url("../img/contact.jpg");
+  }
+  &.cd-bg-2 {
+    background-image: url("../img/lake-photo.jpg");
+  }
+  &.cd-bg-3 {
+    background-image: url("../img/food.jpg");
+  }
+  &.cd-bg-4 {
+    background-image: url("../img/hike.jpg");
+  }
+	&.cd-bg-5 {
+    background-image: url("../img/availability.jpg");
+  }
+  .parallax-fixed-inner {
+		@include flex;
+		@include flex-align(center, middle);
+    height: 90%;
+    color: $white;
+		text-shadow: 2px 2px 7px black;
+  }
+}
+
+.cd-scrolling-bg {
+	height: 100%;
+  position: relative;
+  z-index:2;
+  &.cd-color-1 {
+    background: #D0C3B1;
+  }
+  &.cd-color-2 {
+    background: #6F7661;
+  }
+  &.cd-color-3 {
+    background: #5C737A;
+  }
+  &.cd-color-4 {
+    background: #8F857E;
+  }
+	&.cd-color-5 {
+    background: #8F8F7A;
+  }
+	.cd-container {
+		width: 80%;
+		min-width: 300px;
+		max-width: 750px;
+		margin: auto;
+		height: 100%;
+		@include flex;
+		align-items: center;
+		align-content: center;
+		flex-wrap: wrap;
+	}
+}
+
+//My helper
+.row {
+	width: 100%;
+}
