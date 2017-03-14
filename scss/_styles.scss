@@ -6,8 +6,8 @@ html, main, body, .parallax-container {
 }
 
 main {
-  position: relative;
-  z-index: 1;
+  // position: relative;
+  // z-index: 1;
 }
 
 .cd-fixed-bg {
@@ -18,6 +18,11 @@ main {
 	background-repeat: no-repeat;
 	background-position: center center;
   z-index: 1;
+	@include breakpoint(small only) {
+		height: 40%;
+		background-attachment: scroll;
+		background-size: 100% 100%;
+	}
   &.cd-bg-1 {
     background-image: url("../img/contact.jpg");
   }
@@ -39,6 +44,9 @@ main {
     height: 90%;
     color: $white;
 		text-shadow: 2px 2px 7px black;
+		@include breakpoint(small only) {
+			padding: 0 .5em;
+		}
   }
 }
 
@@ -46,6 +54,10 @@ main {
 	height: 100%;
   position: relative;
   z-index:2;
+	@include breakpoint(small only) {
+		height: auto;
+		padding: 1.5em 0;
+	}
   &.cd-color-1 {
     background: #D0C3B1;
   }
@@ -62,7 +74,7 @@ main {
     background: #8F8F7A;
   }
 	.cd-container {
-		width: 80%;
+		width: 90%;
 		min-width: 300px;
 		max-width: 750px;
 		margin: auto;
@@ -77,4 +89,17 @@ main {
 //My helper
 .row {
 	width: 100%;
+}
+
+.bc-back-next {
+	background: $white;
+}
+
+.top-bar, .top-bar ul {
+	position: relative;
+	z-index: 2;
+}
+
+.sticky.is-anchored {
+	z-index: 2;
 }
